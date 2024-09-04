@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for the recipe cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Recipe card styles */
+.recipe-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    flex: 1 1 calc(33.333% - 40px); /* Responsive width calculation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recipe-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.recipe-card p {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and small screens */
+@media (max-width: 768px) {
+    .recipe-card {
+        flex: 1 1 calc(50% - 20px); /* Adjust to two columns on smaller screens */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .recipe-card {
+        flex: 1 1 100%; /* Full-width cards on mobile */
+    }
+
+    .recipe-card h3 {
+        font-size: 1.3em;
+    }
+
+    .recipe-card p {
+        font-size: 0.8em;
+    }
+}
+
+.recipe-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
